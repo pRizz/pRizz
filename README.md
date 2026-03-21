@@ -16,9 +16,47 @@ I care about software that expands freedom, reduces dependence on closed systems
 
 ## Current projects
 
-- **[OpenLinks](https://openlinks.us/)** ([repo](https://github.com/pRizz/open-links)) - A free, open source, version-controlled link-in-bio platform for people who want to own and customize their online presence.
-- **[Free The World](https://freetheworld.ai/)** ([repo](https://github.com/pRizz/free-the-world)) - A research-driven registry tracking where AI, open source, Bitcoin-native coordination, and distributed manufacturing can break overpriced corporate moats.
-- **[Win3Bitco.in](https://win3bitco.in/)** ([repo](https://github.com/pRizz/open-bitcoin-web-miner)) - An open Bitcoin mining experiment that lets anyone try real mining, inspect the proof, and understand where consumer and home mining fit in a more open future.
+### [OpenLinks](https://openlinks.us/)
+
+[Repo](https://github.com/pRizz/open-links)
+
+A free, open source, version-controlled link-in-bio platform for people who want to own and customize their online presence.
+
+<a href="https://openlinks.us/">
+  <img
+    src="assets/screenshots/openlinks.png"
+    alt="Screenshot of OpenLinks showing Peter Ryszkiewicz's public profile and link cards"
+    width="720"
+  />
+</a>
+
+### [Free The World](https://freetheworld.ai/)
+
+[Repo](https://github.com/pRizz/free-the-world)
+
+A research-driven registry tracking where AI, open source, Bitcoin-native coordination, and distributed manufacturing can break overpriced corporate moats.
+
+<a href="https://freetheworld.ai/companies">
+  <img
+    src="assets/screenshots/free-the-world.png"
+    alt="Screenshot of Free The World showing the company registry interface"
+    width="720"
+  />
+</a>
+
+### [Win3Bitco.in](https://win3bitco.in/)
+
+[Repo](https://github.com/pRizz/open-bitcoin-web-miner)
+
+An open Bitcoin mining experiment that lets anyone try real mining, inspect the proof, and understand where consumer and home mining fit in a more open future.
+
+<a href="https://win3bitco.in/simple-mining">
+  <img
+    src="assets/screenshots/win3bitcoin.png"
+    alt="Screenshot of Win3Bitco.in showing the simple mining interface"
+    width="720"
+  />
+</a>
 
 These projects look different on the surface, but they all point in the same direction: more user ownership, more open coordination, and more room for disruptive ideas that do not require permission from gatekeepers.
 
