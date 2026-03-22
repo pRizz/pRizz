@@ -70,6 +70,30 @@ I am interested in tools, protocols, and services that move power outward: towar
 - Bitcoin makes more decentralized coordination possible.
 - Software should expand human agency, not just lock people into another box.
 
+## Quotes That Inspire Me
+
+Some lines I keep coming back to:
+
+> "Stay hungry, stay foolish."
+>
+> - Steve Jobs (1955-2011)
+
+> "Take chances, make mistakes, get messy!"
+>
+> - Ms. Frizzle
+
+> "Life's a garden, dig it."
+>
+> - Joe Dirt
+
+> "Life is not a serious journey with a final destination, but rather a dance or musical act meant to be enjoyed in the present."
+>
+> - Paraphrase of Alan Watts (1915-1973)
+
+> "No taxation without representation."
+>
+> - Commonly attributed to James Otis Jr. (1725-1783)
+
 ## Selected writing
 
 I write about Bitcoin, open systems, software, and the strange ways the future sneaks up on incumbents.
