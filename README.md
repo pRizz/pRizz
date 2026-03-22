@@ -6,13 +6,19 @@ Chicago-based agentic engineer building free, open source, decentralized tools a
 
 I care about software that expands freedom, reduces dependence on closed systems, and helps push the world toward more liberty and prosperity.
 
-[![Peter's OpenLinks](https://openlinks.us/badges/openlinks.svg)](https://openlinks.us/)
+<p align="center">
+  <a href="https://openlinks.us/">
+    <img src="https://openlinks.us/badges/openlinks.svg" alt="Peter's OpenLinks" />
+  </a>
+</p>
 
-![Bitcoin](https://img.shields.io/badge/Bitcoin-Builder-F7931A?style=flat&logo=bitcoin&logoColor=white)
-![AI](https://img.shields.io/badge/AI-Agentic%20Engineer-7C3AED?style=flat)
-![Free & Open Source](https://img.shields.io/badge/Free%20%26%20Open%20Source-Definitely-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)
-![Decentralized](https://img.shields.io/badge/Decentralized-Always-0EA5E9?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgYXJpYS1oaWRkZW49InRydWUiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNiI%2BPHBhdGggZD0iTTEyIDEyIDEyIDQuMjUiIC8%2BPHBhdGggZD0iTTEyIDEyIDE4LjcxMSA4LjEyNSIgLz48cGF0aCBkPSJNMTIgMTIgMTguNzExIDE1Ljg3NSIgLz48cGF0aCBkPSJNMTIgMTIgMTIgMTkuNzUiIC8%2BPHBhdGggZD0iTTEyIDEyIDUuMjg5IDE1Ljg3NSIgLz48cGF0aCBkPSJNMTIgMTIgNS4yODkgOC4xMjUiIC8%2BPC9nPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjIuMiIgZmlsbD0iI2ZmZiIgLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjQuMjUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iMTguNzExIiBjeT0iOC4xMjUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iMTguNzExIiBjeT0iMTUuODc1IiByPSIxLjU1IiBmaWxsPSIjZmZmIiAvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTkuNzUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iNS4yODkiIGN5PSIxNS44NzUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iNS4yODkiIGN5PSI4LjEyNSIgcj0iMS41NSIgZmlsbD0iI2ZmZiIgLz48L3N2Zz4%3D)
-![Changing the World](https://img.shields.io/badge/Changing%20the%20World-Every%20Day-D97706?style=flat)
+<p align="center">
+  <img src="https://img.shields.io/badge/Bitcoin-Builder-F7931A?style=flat&logo=bitcoin&logoColor=white" alt="Bitcoin" />
+  <img src="https://img.shields.io/badge/AI-Agentic%20Engineer-7C3AED?style=flat" alt="AI" />
+  <img src="https://img.shields.io/badge/Free%20%26%20Open%20Source-Definitely-3DA639?style=flat&logo=opensourceinitiative&logoColor=white" alt="Free &amp; Open Source" />
+  <img src="https://img.shields.io/badge/Decentralized-Always-0EA5E9?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgYXJpYS1oaWRkZW49InRydWUiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNiI%2BPHBhdGggZD0iTTEyIDEyIDEyIDQuMjUiIC8%2BPHBhdGggZD0iTTEyIDEyIDE4LjcxMSA4LjEyNSIgLz48cGF0aCBkPSJNMTIgMTIgMTguNzExIDE1Ljg3NSIgLz48cGF0aCBkPSJNMTIgMTIgMTIgMTkuNzUiIC8%2BPHBhdGggZD0iTTEyIDEyIDUuMjg5IDE1Ljg3NSIgLz48cGF0aCBkPSJNMTIgMTIgNS4yODkgOC4xMjUiIC8%2BPC9nPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjIuMiIgZmlsbD0iI2ZmZiIgLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjQuMjUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iMTguNzExIiBjeT0iOC4xMjUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iMTguNzExIiBjeT0iMTUuODc1IiByPSIxLjU1IiBmaWxsPSIjZmZmIiAvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTkuNzUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iNS4yODkiIGN5PSIxNS44NzUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iNS4yODkiIGN5PSI4LjEyNSIgcj0iMS41NSIgZmlsbD0iI2ZmZiIgLz48L3N2Zz4%3D" alt="Decentralized" />
+  <img src="https://img.shields.io/badge/Changing%20the%20World-Every%20Day-D97706?style=flat" alt="Changing the World" />
+</p>
 
 ## Current projects
 
@@ -133,15 +139,41 @@ If you are building in AI, Bitcoin, open systems, developer tooling, or weird an
 
 ## Connect
 
-[![Peter's OpenLinks](https://openlinks.us/badges/openlinks.svg)](https://openlinks.us/)
-[![Club Orange](https://img.shields.io/badge/Club%20Orange-@pryszkie-4B5563?style=flat)](https://app.cluborange.org/pryszkie)
-[![Primal](https://img.shields.io/badge/Primal-@peterryszkiewicz-8E42FF?style=flat)](https://primal.net/peterryszkiewicz)
-[![GitHub](https://img.shields.io/badge/GitHub-@prizz-181717?style=flat&logo=github&logoColor=white)](https://github.com/pRizz)
-[![Substack](https://img.shields.io/badge/Substack-peter.ryszkiewicz.us-FF6719?style=flat&logo=substack&logoColor=white)](https://peter.ryszkiewicz.us/)
-[![X](https://img.shields.io/badge/X-@pryszkie-000000?style=flat&logo=x&logoColor=white)](https://x.com/pryszkie)
-[![Facebook](https://img.shields.io/badge/Facebook-@peter.ryszkiewicz-1877F2?style=flat&logo=facebook&logoColor=white)](https://www.facebook.com/peter.ryszkiewicz)
-[![Instagram](https://img.shields.io/badge/Instagram-@peterryszkiewicz-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/peterryszkiewicz/)
-[![YouTube](https://img.shields.io/badge/YouTube-@peterryszkiewicz4354-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@peterryszkiewicz4354)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-peter--ryszkiewicz-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/peter-ryszkiewicz/)
-[![Bright Builds](https://img.shields.io/badge/Bright%20Builds-Facebook-4B5563?style=flat)](https://www.facebook.com/people/Bright-Builds-LLC/61588043858384/)
-[![Medium](https://img.shields.io/badge/Medium-@peterryszkiewicz-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/@peterryszkiewicz)
+<p align="center">
+  <a href="https://openlinks.us/">
+    <img src="https://openlinks.us/badges/openlinks.svg" alt="Peter's OpenLinks" />
+  </a>
+  <a href="https://app.cluborange.org/pryszkie">
+    <img src="https://img.shields.io/badge/Club%20Orange-@pryszkie-4B5563?style=flat" alt="Club Orange" />
+  </a>
+  <a href="https://primal.net/peterryszkiewicz">
+    <img src="https://img.shields.io/badge/Primal-@peterryszkiewicz-8E42FF?style=flat" alt="Primal" />
+  </a>
+  <a href="https://github.com/pRizz">
+    <img src="https://img.shields.io/badge/GitHub-@prizz-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://peter.ryszkiewicz.us/">
+    <img src="https://img.shields.io/badge/Substack-peter.ryszkiewicz.us-FF6719?style=flat&logo=substack&logoColor=white" alt="Substack" />
+  </a>
+  <a href="https://x.com/pryszkie">
+    <img src="https://img.shields.io/badge/X-@pryszkie-000000?style=flat&logo=x&logoColor=white" alt="X" />
+  </a>
+  <a href="https://www.facebook.com/peter.ryszkiewicz">
+    <img src="https://img.shields.io/badge/Facebook-@peter.ryszkiewicz-1877F2?style=flat&logo=facebook&logoColor=white" alt="Facebook" />
+  </a>
+  <a href="https://www.instagram.com/peterryszkiewicz/">
+    <img src="https://img.shields.io/badge/Instagram-@peterryszkiewicz-E4405F?style=flat&logo=instagram&logoColor=white" alt="Instagram" />
+  </a>
+  <a href="https://www.youtube.com/@peterryszkiewicz4354">
+    <img src="https://img.shields.io/badge/YouTube-@peterryszkiewicz4354-FF0000?style=flat&logo=youtube&logoColor=white" alt="YouTube" />
+  </a>
+  <a href="https://www.linkedin.com/in/peter-ryszkiewicz/">
+    <img src="https://img.shields.io/badge/LinkedIn-peter--ryszkiewicz-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://www.facebook.com/people/Bright-Builds-LLC/61588043858384/">
+    <img src="https://img.shields.io/badge/Bright%20Builds-Facebook-4B5563?style=flat" alt="Bright Builds" />
+  </a>
+  <a href="https://medium.com/@peterryszkiewicz">
+    <img src="https://img.shields.io/badge/Medium-@peterryszkiewicz-12100E?style=flat&logo=medium&logoColor=white" alt="Medium" />
+  </a>
+</p>
