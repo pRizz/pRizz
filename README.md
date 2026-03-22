@@ -70,6 +70,28 @@ I am interested in tools, protocols, and services that move power outward: towar
 - Bitcoin makes more decentralized coordination possible.
 - Software should expand human agency, not just lock people into another box.
 
+## How I build
+
+This is the current map I use for thinking about AI tooling: which tools fit simple versus complex apps, and which ones produce quick vibes versus more durable engineered output.
+
+<a href="https://github.com/pRizz/my-tooling-opinions">
+  <img
+    src="https://raw.githubusercontent.com/pRizz/my-tooling-opinions/main/public/graph-square.png"
+    alt="A square AI tooling graph mapping tools by app complexity and engineering rigor"
+    width="720"
+  />
+</a>
+
+The horizontal axis runs from simple to complex app complexity. The vertical axis runs from vibe-coded to vibe-engineered, with app durability increasing as you move upward.
+
+- **Cursor / Codex Desktop** - The fastest path for quick builds, prototypes, and simple apps.
+- **Codex Desktop (Plan Mode)** - My default once the work gets more moderate-to-complex and I want more durable structure.
+- **Lovable (Plan Mode)** - Useful when I want to explore ideas with structure but the durability demands are still moderate.
+- **Cursor Cloud Agents** - Best for complex, long-running work that can grind away in the background.
+- **Get-Shit-Done (GSD)** - The most engineered and maintainable path when the build is serious and I want stronger process.
+
+For the chart source and the evolving version of these opinions, see [my-tooling-opinions](https://github.com/pRizz/my-tooling-opinions).
+
 ## Quotes That Inspire Me
 
 Some lines I keep coming back to:
