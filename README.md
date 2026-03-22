@@ -8,11 +8,11 @@ I care about software that expands freedom, reduces dependence on closed systems
 
 [![Peter's OpenLinks](https://openlinks.us/badges/openlinks.svg)](https://openlinks.us/)
 
-![Open Source](https://img.shields.io/badge/Open%20Source-yes-3DA639?style=flat)
-![Decentralized](https://img.shields.io/badge/Decentralized-open%20systems-0EA5E9?style=flat)
-![Bitcoin](https://img.shields.io/badge/Bitcoin-builder-F7931A?style=flat&logo=bitcoin&logoColor=white)
-![AI](https://img.shields.io/badge/AI-agentic%20engineering-7C3AED?style=flat)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
+![Bitcoin](https://img.shields.io/badge/Bitcoin-Builder-F7931A?style=flat&logo=bitcoin&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Agentic%20Engineer-7C3AED?style=flat)
+![Free & Open Source](https://img.shields.io/badge/Free%20%26%20Open%20Source-Definitely-3DA639?style=flat&logo=opensourceinitiative&logoColor=white)
+![Decentralized](https://img.shields.io/badge/Decentralized-Always-0EA5E9?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgYXJpYS1oaWRkZW49InRydWUiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2ZmZiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuNiI%2BPHBhdGggZD0iTTEyIDEyIDEyIDQuMjUiIC8%2BPHBhdGggZD0iTTEyIDEyIDE4LjcxMSA4LjEyNSIgLz48cGF0aCBkPSJNMTIgMTIgMTguNzExIDE1Ljg3NSIgLz48cGF0aCBkPSJNMTIgMTIgMTIgMTkuNzUiIC8%2BPHBhdGggZD0iTTEyIDEyIDUuMjg5IDE1Ljg3NSIgLz48cGF0aCBkPSJNMTIgMTIgNS4yODkgOC4xMjUiIC8%2BPC9nPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjIuMiIgZmlsbD0iI2ZmZiIgLz48Y2lyY2xlIGN4PSIxMiIgY3k9IjQuMjUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iMTguNzExIiBjeT0iOC4xMjUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iMTguNzExIiBjeT0iMTUuODc1IiByPSIxLjU1IiBmaWxsPSIjZmZmIiAvPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTkuNzUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iNS4yODkiIGN5PSIxNS44NzUiIHI9IjEuNTUiIGZpbGw9IiNmZmYiIC8%2BPGNpcmNsZSBjeD0iNS4yODkiIGN5PSI4LjEyNSIgcj0iMS41NSIgZmlsbD0iI2ZmZiIgLz48L3N2Zz4%3D)
+![Changing the World](https://img.shields.io/badge/Changing%20the%20World-Every%20Day-D97706?style=flat)
 
 ## Current projects
 
