@@ -6,13 +6,13 @@ Chicago-based agentic engineer building free, open source, decentralized tools a
 
 I care about software that expands freedom, reduces dependence on closed systems, and helps push the world toward more liberty and prosperity.
 
-[![Peter's OpenLinks](https://prizz.github.io/open-links/badges/openlinks.svg)](https://prizz.github.io/open-links/)
+[![Peter's OpenLinks](https://openlinks.us/badges/openlinks.svg)](https://openlinks.us/)
 
-![Open Source](https://img.shields.io/badge/Open%20Source-yes-3DA639?style=flat-square)
-![Decentralized](https://img.shields.io/badge/Decentralized-open%20systems-0EA5E9?style=flat-square)
-![Bitcoin](https://img.shields.io/badge/Bitcoin-builder-F7931A?style=flat-square&logo=bitcoin&logoColor=white)
-![AI](https://img.shields.io/badge/AI-agentic%20engineering-7C3AED?style=flat-square)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Open Source](https://img.shields.io/badge/Open%20Source-yes-3DA639?style=flat)
+![Decentralized](https://img.shields.io/badge/Decentralized-open%20systems-0EA5E9?style=flat)
+![Bitcoin](https://img.shields.io/badge/Bitcoin-builder-F7931A?style=flat&logo=bitcoin&logoColor=white)
+![AI](https://img.shields.io/badge/AI-agentic%20engineering-7C3AED?style=flat)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white)
 
 ## Current projects
 
@@ -109,9 +109,17 @@ If you are building in AI, Bitcoin, open systems, developer tooling, or weird an
 - Podcast and speaking invites welcome
 - Best inbound: **[send me a message on Primal](https://primal.net/peterryszkiewicz)**
 
-## Elsewhere
+## Connect
 
-- **OpenLinks:** [prizz.github.io/open-links](https://prizz.github.io/open-links/)
-- **Primal:** [primal.net/peterryszkiewicz](https://primal.net/peterryszkiewicz)
-- **Bright Builds:** [brightbuilds.us](https://brightbuilds.us/)
-- **Writing:** [peter.ryszkiewicz.us](https://peter.ryszkiewicz.us/)
+[![Peter's OpenLinks](https://openlinks.us/badges/openlinks.svg)](https://openlinks.us/)
+[![Club Orange](https://img.shields.io/badge/Club%20Orange-@pryszkie-4B5563?style=flat)](https://app.cluborange.org/pryszkie)
+[![Primal](https://img.shields.io/badge/Primal-@peterryszkiewicz-8E42FF?style=flat)](https://primal.net/peterryszkiewicz)
+[![GitHub](https://img.shields.io/badge/GitHub-@prizz-181717?style=flat&logo=github&logoColor=white)](https://github.com/pRizz)
+[![Substack](https://img.shields.io/badge/Substack-peter.ryszkiewicz.us-FF6719?style=flat&logo=substack&logoColor=white)](https://peter.ryszkiewicz.us/)
+[![X](https://img.shields.io/badge/X-@pryszkie-000000?style=flat&logo=x&logoColor=white)](https://x.com/pryszkie)
+[![Facebook](https://img.shields.io/badge/Facebook-@peter.ryszkiewicz-1877F2?style=flat&logo=facebook&logoColor=white)](https://www.facebook.com/peter.ryszkiewicz)
+[![Instagram](https://img.shields.io/badge/Instagram-@peterryszkiewicz-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/peterryszkiewicz/)
+[![YouTube](https://img.shields.io/badge/YouTube-@peterryszkiewicz4354-FF0000?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@peterryszkiewicz4354)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-peter--ryszkiewicz-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/peter-ryszkiewicz/)
+[![Bright Builds](https://img.shields.io/badge/Bright%20Builds-Facebook-4B5563?style=flat)](https://www.facebook.com/people/Bright-Builds-LLC/61588043858384/)
+[![Medium](https://img.shields.io/badge/Medium-@peterryszkiewicz-12100E?style=flat&logo=medium&logoColor=white)](https://medium.com/@peterryszkiewicz)
