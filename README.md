@@ -122,6 +122,14 @@ Some lines I keep coming back to:
 >
 > - Commonly attributed to James Otis Jr. (1725-1783)
 
+> "Be the change you want to see in the world."
+>
+> - Commonly attributed to Mahatma Gandhi (1869-1948)
+
+> "Deflation is the natural state of a free market. And only #Bitcoin can measure it."
+>
+> - Jeff Booth
+
 ## Selected writing
 
 I write about Bitcoin, open systems, software, and the strange ways the future sneaks up on incumbents.
