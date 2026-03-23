@@ -126,7 +126,7 @@ Some lines I keep coming back to:
 >
 > - Commonly attributed to Mahatma Gandhi (1869-1948)
 
-> "... with liberty and justice, for all"
+> "… with liberty and justice, for all"
 >
 > - The Pledge of Allegiance of the United States
 
