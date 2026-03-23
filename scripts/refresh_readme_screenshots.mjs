@@ -37,12 +37,35 @@ const targets = [
   },
   {
     id: 'win3bitcoin',
-    url: 'https://win3bitco.in/simple-mining',
+    url: 'https://win3bitco.in/',
     outputPath: path.join(repoRoot, 'assets', 'screenshots', 'win3bitcoin.png'),
     readyChecks: [
       (page) => page.getByRole('heading', { level: 1, name: 'Win3Bitco.in' }).first(),
-      (page) => page.getByRole('button', { name: 'Start Mining', exact: true }).first(),
+      (page) => page.getByRole('heading', { level: 2, name: 'Mining Controls' }).first(),
+      (page) => page.getByText('Configure your mining settings', { exact: true }).first(),
     ],
+    beforeScreenshot: async (page) => {
+      const sidebarIsCollapsed = await page.evaluate(() => {
+        const maybeButton = Array.from(document.querySelectorAll('button')).find(
+          (element) => element.textContent?.trim() === 'Clear Data',
+        );
+
+        return maybeButton ? maybeButton.getBoundingClientRect().left < 0 : false;
+      });
+
+      if (!sidebarIsCollapsed) {
+        return;
+      }
+
+      await page.getByRole('button', { name: 'Toggle Sidebar', exact: true }).click();
+      await page.waitForFunction(() => {
+        const maybeButton = Array.from(document.querySelectorAll('button')).find(
+          (element) => element.textContent?.trim() === 'Clear Data',
+        );
+
+        return maybeButton ? maybeButton.getBoundingClientRect().left >= 0 : false;
+      });
+    },
   },
 ];
 
@@ -159,6 +182,10 @@ async function captureTarget(browser, target) {
 
     for (const readyCheck of target.readyChecks) {
       await readyCheck(page).waitFor({ state: 'visible', timeout: locatorTimeoutMs });
+    }
+
+    if (target.beforeScreenshot) {
+      await target.beforeScreenshot(page);
     }
 
     await page.waitForTimeout(settleDelayMs);

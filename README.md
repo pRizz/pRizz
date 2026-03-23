@@ -56,10 +56,10 @@ A research-driven registry tracking where AI, open source, Bitcoin-native coordi
 
 An open Bitcoin mining experiment that lets anyone try real mining, inspect the proof, and understand where consumer and home mining fit in a more open future.
 
-<a href="https://win3bitco.in/simple-mining">
+<a href="https://win3bitco.in/">
   <img
     src="assets/screenshots/win3bitcoin.png"
-    alt="Screenshot of Win3Bitco.in showing the simple mining interface"
+    alt="Screenshot of Win3Bitco.in showing the full mining dashboard"
     width="720"
   />
 </a>
