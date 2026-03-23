@@ -54,7 +54,7 @@ A research-driven registry tracking where AI, open source, Bitcoin-native coordi
 
 [Repo](https://github.com/pRizz/open-bitcoin-web-miner)
 
-An open Bitcoin mining experiment that lets anyone try real mining, inspect the proof, and understand where consumer and home mining fit in a more open future.
+An open Bitcoin mining experiment that lets anyone play around with real mining, inspect the proof, and learn how Bitcoin mining works using their own computer's CPU or GPU. It offers a hands-on way to understand where consumer and home mining fit in a more open future, including the astronomically low but real chance of actually winning a block.
 
 <a href="https://win3bitco.in/">
   <img
