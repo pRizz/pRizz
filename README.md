@@ -78,7 +78,7 @@ I am interested in tools, protocols, and services that move power outward: towar
 
 ## How I build
 
-I base my recent projects, and the ones I build going forward, on the standards and patterns captured in [coding-and-architecture-requirements](https://github.com/bright-builds-llc/coding-and-architecture-requirements). It serves as the living reference for how I think about code quality, architecture, maintainability, and the overall shape of serious software projects.
+I base my recent projects, and the ones I build going forward, on the standards and patterns captured in [coding-and-architecture-requirements](https://github.com/bright-builds-llc/coding-and-architecture-requirements). It serves as the living reference for how I think about code quality, architecture, maintainability, and the overall shape of serious software projects, and it continues to evolve as I refine and discover my requirements.
 
 This is the current map I use for thinking about AI tooling: which tools fit simple versus complex apps, and which ones produce quick vibes versus more durable engineered output.
 
