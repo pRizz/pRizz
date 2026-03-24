@@ -136,6 +136,10 @@ Some lines I keep coming back to:
 >
 > - Jeff Booth
 
+> "When you see a good move, look for a better one."
+>
+> - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
+
 ## Selected writing
 
 I write about Bitcoin, open systems, software, and the strange ways the future sneaks up on incumbents.
