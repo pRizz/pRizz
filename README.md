@@ -136,6 +136,10 @@ Some lines I keep coming back to:
 >
 > - Jeff Booth
 
+> "There is no second best."
+>
+> - Michael Saylor
+
 > "When you see a good move, look for a better one."
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
