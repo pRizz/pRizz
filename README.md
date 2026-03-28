@@ -140,6 +140,10 @@ Some lines I keep coming back to:
 >
 > - Michael Saylor
 
+> "Human knowledge belongs to the world."
+>
+> - Milo Hoffman, Antitrust (2001)
+
 > "When you see a good move, look for a better one."
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
