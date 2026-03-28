@@ -144,6 +144,10 @@ Some lines I keep coming back to:
 >
 > - Milo Hoffman, Antitrust (2001)
 
+> "Be curious. Read widely. Try new things. I think a lot of what people call intelligence just boils down to curiosity."
+>
+> - Aaron Swartz (1986-2013)
+
 > "When you see a good move, look for a better one."
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
