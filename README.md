@@ -148,6 +148,10 @@ Some lines I keep coming back to:
 >
 > - Aaron Swartz (1986-2013)
 
+> "Keep asking yourself what the most important thing in the world you could be working on right now is, and if you're not working on it, why not?"
+>
+> - Paraphrase of Lawrence Lessig summarizing Aaron Swartz in *The Internet's Own Boy* (2014)
+
 > "When you see a good move, look for a better one."
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
