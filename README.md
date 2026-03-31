@@ -152,6 +152,10 @@ Some lines I keep coming back to:
 >
 > - Paraphrase of Lawrence Lessig summarizing Aaron Swartz in *The Internet's Own Boy* (2014)
 
+> "Free speech is the best error-correcting asset we have."
+>
+> - Paraphrase of Sam Harris in *Brave New World*, "Sam Harris: Freedom of Speech" (2024)
+
 > "When you see a good move, look for a better one."
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
