@@ -120,6 +120,10 @@ Some lines I keep coming back to:
 >
 > - Paraphrase of Alan Watts (1915-1973)
 
+> [!NOTE]
+> Pop-culture reference: "Don’t be sorry, be better,"
+> - Kratos, *God of War* (2018)
+
 > "No taxation without representation."
 >
 > - Commonly attributed to James Otis Jr. (1725-1783)
