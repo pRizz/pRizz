@@ -136,6 +136,10 @@ Some lines I keep coming back to:
 >
 > - Jeff Booth
 
+> "The trouble with paper money is that it rewards the minority that can manipulate money and makes fools of the generation that has worked and saved."
+>
+> - George Goodman, writing as Adam Smith, in *Paper Money* (1981)
+
 > "There is no second best."
 >
 > - Michael Saylor
