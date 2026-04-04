@@ -136,6 +136,10 @@ Some lines I keep coming back to:
 >
 > - The Pledge of Allegiance of the United States
 
+> "Every gun that is made, every warship launched, every rocket fired signifies, in the final sense, a theft from those who hunger and are not fed, those who are cold and are not clothed."
+>
+> - Dwight D. Eisenhower (1890-1969), *Chance for Peace* speech (1953)
+
 > "Deflation is the natural state of a free market. And only #Bitcoin can measure it."
 >
 > - Jeff Booth
