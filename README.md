@@ -168,6 +168,11 @@ Some lines I keep coming back to:
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
 
+> "We are made of star-stuff."  
+> "Somewhere, something incredible is waiting to be known."  
+> "Extraordinary claims require extraordinary evidence."  
+> — Carl Sagan (1934–1996)
+
 ## Selected writing
 
 I write about Bitcoin, open systems, software, and the strange ways the future sneaks up on incumbents.
