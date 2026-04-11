@@ -1,6 +1,7 @@
 # Hi, I'm Peter 👋
 
-📍 Chicago | Software Engineer at <a href="https://venmo.com/"><img src="https://img.shields.io/badge/-%20-008CFF?style=flat&logo=venmo&logoColor=white&logoSize=auto" alt="Venmo" align="absmiddle"></a> | Founder, [Bright Builds LLC](https://brightbuilds.us/)
+<!-- Bright Builds logo is intentionally vendored from https://github.com/bright-builds-llc/logo at assets/logo/primary/bright-builds-logo.png for README stability. To refresh it, replace assets/logos/bright-builds-logo.png from that canonical upstream asset while keeping this local path stable. -->
+📍 Chicago | Software Engineer at <a href="https://venmo.com/"><img src="https://img.shields.io/badge/-%20-008CFF?style=flat&logo=venmo&logoColor=white&logoSize=auto" alt="Venmo" align="absmiddle"></a> | Founder, <a href="https://github.com/bright-builds-llc">Bright Builds LLC <img src="assets/logos/bright-builds-logo.png" alt="" height="18" align="absmiddle"></a>
 
 Chicago-based agentic engineer building free, open source, decentralized tools across AI, Bitcoin, and the web.
 
