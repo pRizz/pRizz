@@ -157,6 +157,10 @@ Some lines I keep coming back to:
 >
 > - Milo Hoffman, Antitrust (2001)
 
+> "If I have seen further than others, it is by standing on the shoulders of giants."
+>
+> - Isaac Newton (1642-1727)
+
 > "Be curious. Read widely. Try new things. I think a lot of what people call intelligence just boils down to curiosity."
 >
 > - Aaron Swartz (1986-2013)
