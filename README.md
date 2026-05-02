@@ -21,6 +21,22 @@ I care about software that expands freedom, reduces dependence on closed systems
   <img src="https://img.shields.io/badge/Changing%20the%20World-Every%20Day-D97706?style=flat&logo=data%3Aimage%2Fsvg%2Bxml%2C%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20aria-hidden%3D%22true%22%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%20stroke-width%3D%221.6%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%227.5%22%2F%3E%3Cpath%20d%3D%22M4.5%2012h15%22%2F%3E%3Cpath%20d%3D%22M12%204.5c2.4%202%203.75%204.73%203.75%207.5S14.4%2017.5%2012%2019.5%22%2F%3E%3Cpath%20d%3D%22M12%204.5C9.6%206.5%208.25%209.23%208.25%2012S9.6%2017.5%2012%2019.5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E" alt="Changing the World" />
 </p>
 
+<p align="center">
+  <a href="https://github.com/pRizz/github-stats">
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="Peter's GitHub stats overview" width="360" />
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/overview.svg#gh-light-mode-only" alt="Peter's GitHub stats overview" width="360" />
+  </a>
+  <a href="https://github.com/pRizz/github-stats">
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="Peter's most used languages" width="360" />
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/languages.svg#gh-light-mode-only" alt="Peter's most used languages" width="360" />
+  </a>
+  <br />
+  <a href="https://github.com/pRizz/github-stats">
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/monthly-commits.svg#gh-dark-mode-only" alt="Peter's monthly GitHub commits" width="360" />
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/monthly-commits.svg#gh-light-mode-only" alt="Peter's monthly GitHub commits" width="360" />
+  </a>
+</p>
+
 ## Current projects
 
 ### [OpenLinks](https://openlinks.us/)
