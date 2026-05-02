@@ -67,6 +67,18 @@ An open Bitcoin mining experiment that lets anyone play around with real mining,
 
 These projects look different on the surface, but they all point in the same direction: more user ownership, more open coordination, and more room for disruptive ideas that do not require permission from gatekeepers.
 
+## Roadmap
+
+### [Open Bitcoin](https://github.com/bright-builds-llc/open-bitcoin)
+
+[Repo](https://github.com/bright-builds-llc/open-bitcoin)
+
+A headless Bitcoin node and wallet implementation in Rust, built around Bitcoin Knots parity for the in-scope consensus, validation, chainstate, mempool, networking, wallet, RPC, CLI, and configuration surfaces.
+
+The current headless v1 parity surfaces are ready for review and operator testing, but this is not yet for production funds or unattended mainnet operation.
+
+Preview screenshot coming once the project has a stable UI or public dashboard worth showing.
+
 ## Why I build
 
 I am interested in tools, protocols, and services that move power outward: toward users, builders, open networks, and smaller teams.
