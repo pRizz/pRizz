@@ -24,16 +24,13 @@ I care about software that expands freedom, reduces dependence on closed systems
 <p align="center">
   <a href="https://github.com/pRizz/github-stats">
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/overview.svg#gh-dark-mode-only" alt="Peter's GitHub stats overview" width="360" />
-    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/overview.svg#gh-light-mode-only" alt="Peter's GitHub stats overview" width="360" />
   </a>
   <a href="https://github.com/pRizz/github-stats">
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/languages.svg#gh-dark-mode-only" alt="Peter's most used languages" width="360" />
-    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/languages.svg#gh-light-mode-only" alt="Peter's most used languages" width="360" />
   </a>
   <br />
   <a href="https://github.com/pRizz/github-stats">
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/monthly-commits.svg#gh-dark-mode-only" alt="Peter's monthly GitHub commits" width="360" />
-    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/monthly-commits.svg#gh-light-mode-only" alt="Peter's monthly GitHub commits" width="360" />
   </a>
 </p>
 
