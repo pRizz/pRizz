@@ -33,16 +33,19 @@ I care about software that expands freedom, reduces dependence on closed systems
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/monthly-commits.svg#gh-dark-mode-only" alt="Peter's monthly GitHub commits" width="360" />
   </a>
   <a href="https://github.com/pRizz/github-stats">
-    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/experimental-contribution-pulse.svg#gh-dark-mode-only" alt="Peter's GitHub contribution pulse" width="360" />
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/experimental-commit-velocity.svg#gh-dark-mode-only" alt="Peter's GitHub commit velocity" width="360" />
   </a>
   <br />
+  <a href="https://github.com/pRizz/github-stats">
+    <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/experimental-contribution-pulse.svg#gh-dark-mode-only" alt="Peter's GitHub contribution pulse" width="360" />
+  </a>
   <a href="https://github.com/pRizz/github-stats">
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/experimental-trading-card.svg#gh-dark-mode-only" alt="Peter's GitHub trading card" width="360" />
   </a>
+  <br />
   <a href="https://github.com/pRizz/github-stats">
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/experimental-contribution-mix.svg#gh-dark-mode-only" alt="Peter's GitHub contribution mix" width="360" />
   </a>
-  <br />
   <a href="https://github.com/pRizz/github-stats">
     <img src="https://raw.githubusercontent.com/pRizz/github-stats/master/generated/experimental-language-momentum.svg#gh-dark-mode-only" alt="Peter's GitHub language momentum" width="360" />
   </a>
