@@ -2,11 +2,15 @@ name: Refresh README screenshots
 
 on:
   workflow_dispatch:
+    inputs:
+      publish:
+        description: Commit validated screenshot changes to the default branch
+        required: false
+        default: false
+        type: boolean
   schedule:
-    # GitHub Actions schedules run in UTC, so we trigger both 14:00 and 15:00 UTC
-    # and gate inside the job to land on 9:00 AM America/Chicago across DST changes.
-    - cron: "0 14 * * *"
-    - cron: "0 15 * * *"
+    - cron: "17 9 * * *"
+      timezone: "America/Chicago"
 
 permissions:
   contents: write
@@ -18,68 +22,45 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
-      - name: Gate scheduled runs to 9:00 AM America/Chicago
-        id: schedule_gate
-        shell: bash
-        run: |
-          if [[ "${{ github.event_name }}" != "schedule" ]]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            echo "local_time=manual" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          local_time="$(TZ=America/Chicago date '+%Y-%m-%d %H:%M:%S %Z')"
-          local_hour_minute="$(TZ=America/Chicago date '+%H:%M')"
-
-          echo "local_time=$local_time" >> "$GITHUB_OUTPUT"
-
-          if [[ "$local_hour_minute" == "09:00" ]]; then
-            echo "should_run=true" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-
-          echo "should_run=false" >> "$GITHUB_OUTPUT"
-          echo "Skipping scheduled run at $local_time."
-
-      - name: Check out default branch
-        if: steps.schedule_gate.outputs.should_run == 'true'
+      - name: Check out screenshot source
         uses: actions/checkout@v5
         with:
-          ref: ${{ github.event.repository.default_branch }}
+          ref: ${{ (github.event_name == 'schedule' || inputs.publish) && github.event.repository.default_branch || github.ref }}
           fetch-depth: 0
 
       - name: Set up pnpm
-        if: steps.schedule_gate.outputs.should_run == 'true'
         uses: pnpm/action-setup@v4
         with:
           version: 10.26.1
 
       - name: Set up Node.js
-        if: steps.schedule_gate.outputs.should_run == 'true'
         uses: actions/setup-node@v5
         with:
           node-version: 24
           cache: pnpm
 
       - name: Install dependencies
-        if: steps.schedule_gate.outputs.should_run == 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Install Chromium
-        if: steps.schedule_gate.outputs.should_run == 'true'
         run: pnpm exec playwright install --with-deps chromium
 
       - name: Refresh README screenshots
-        if: steps.schedule_gate.outputs.should_run == 'true'
         run: pnpm screenshots:refresh
 
       - name: Detect screenshot changes
-        if: steps.schedule_gate.outputs.should_run == 'true'
         id: screenshot_changes
         shell: bash
         run: |
+          if ! git diff --quiet -- . ':(exclude)assets/screenshots/*.png'; then
+            echo "::error::Screenshot refresh modified files outside assets/screenshots."
+            git status --short
+            exit 1
+          fi
+
           if git diff --quiet -- assets/screenshots; then
             echo "has_changes=false" >> "$GITHUB_OUTPUT"
             exit 0
@@ -87,8 +68,17 @@ jobs:
 
           echo "has_changes=true" >> "$GITHUB_OUTPUT"
 
+      - name: Upload screenshot preview
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshot-preview-${{ github.run_id }}
+          path: assets/screenshots/*.png
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Commit refreshed screenshots
-        if: steps.schedule_gate.outputs.should_run == 'true' && steps.screenshot_changes.outputs.has_changes == 'true'
+        if: (github.event_name == 'schedule' || inputs.publish) && steps.screenshot_changes.outputs.has_changes == 'true'
         shell: bash
         run: |
           default_branch="${{ github.event.repository.default_branch }}"
@@ -108,9 +98,10 @@ jobs:
           git push origin "HEAD:$default_branch"
 
       - name: Upload Playwright debug artifacts
-        if: failure() && steps.schedule_gate.outputs.should_run == 'true'
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-debug-artifacts
           path: output/playwright/
           if-no-files-found: ignore
+          retention-days: 7

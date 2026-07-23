@@ -7,14 +7,26 @@ import { fileURLToPath } from 'node:url';
 
 import { chromium } from 'playwright';
 
+import {
+  normalizeError,
+  parseArgs,
+  runCaptureBatch,
+  ScreenshotBatchError,
+  validateScreenshot,
+} from './screenshot_refresh_core.mjs';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, '..');
 const viewport = { width: 1440, height: 1080 };
+const maxCaptureAttempts = 3;
 const settleDelayMs = 1_000;
 const navigationTimeoutMs = 60_000;
 const locatorTimeoutMs = 30_000;
-const debugDir = path.join(repoRoot, 'output', 'playwright');
+const artifactsDir = path.join(repoRoot, 'output', 'playwright');
+const debugDir = path.join(artifactsDir, 'debug');
+const generatedDir = path.join(artifactsDir, 'generated');
+const summaryPath = path.join(artifactsDir, 'summary.json');
 
 const targets = [
   {
@@ -69,41 +81,6 @@ const targets = [
   },
 ];
 
-function parseArgs(argv) {
-  let maybeOnly = null;
-
-  for (let index = 0; index < argv.length; index += 1) {
-    const arg = argv[index];
-
-    if (arg === '--') {
-      continue;
-    }
-
-    if (arg === '--only') {
-      maybeOnly = argv[index + 1];
-      if (!maybeOnly || maybeOnly === '--') {
-        throw new Error('Missing value for --only');
-      }
-      index += 1;
-      continue;
-    }
-
-    throw new Error(`Unknown argument: ${arg}`);
-  }
-
-  if (!maybeOnly) {
-    return targets;
-  }
-
-  const maybeTarget = targets.find((target) => target.id === maybeOnly);
-  if (!maybeTarget) {
-    const knownTargets = targets.map((target) => target.id).join(', ');
-    throw new Error(`Unknown screenshot target "${maybeOnly}". Available targets: ${knownTargets}`);
-  }
-
-  return [maybeTarget];
-}
-
 async function disableMotion(page) {
   await page.addStyleTag({
     content: `
@@ -128,13 +105,13 @@ async function waitForFonts(page) {
   });
 }
 
-async function captureDebugArtifacts(page, target, error) {
-  const targetDebugDir = path.join(debugDir, target.id);
+async function captureDebugArtifacts({ page, target, attempt, startedAt, responseStatus, error }) {
+  const targetDebugDir = path.join(debugDir, target.id, `attempt-${attempt}`);
   await mkdir(targetDebugDir, { recursive: true });
 
-  const screenshotPath = path.join(targetDebugDir, `${target.id}.png`);
-  const htmlPath = path.join(targetDebugDir, `${target.id}.html`);
-  const metadataPath = path.join(targetDebugDir, `${target.id}.json`);
+  const screenshotPath = path.join(targetDebugDir, 'page.png');
+  const htmlPath = path.join(targetDebugDir, 'page.html');
+  const metadataPath = path.join(targetDebugDir, 'metadata.json');
 
   try {
     await page.screenshot({
@@ -142,40 +119,71 @@ async function captureDebugArtifacts(page, target, error) {
       fullPage: true,
       animations: 'disabled',
     });
-  } catch {
-    // Keep the original failure as the primary signal.
+  } catch (artifactError) {
+    console.warn(`Could not capture debug screenshot for ${target.id}: ${normalizeError(artifactError).message}`);
   }
 
   try {
     await writeFile(htmlPath, await page.content(), 'utf8');
-  } catch {
-    // Keep the original failure as the primary signal.
+  } catch (artifactError) {
+    console.warn(`Could not capture debug HTML for ${target.id}: ${normalizeError(artifactError).message}`);
   }
 
+  let maybeTitle = null;
+
+  try {
+    maybeTitle = await page.title();
+  } catch (artifactError) {
+    console.warn(`Could not read page title for ${target.id}: ${normalizeError(artifactError).message}`);
+  }
+
+  const normalizedError = normalizeError(error);
   const metadata = {
     id: target.id,
+    attempt,
+    sourceUrl: target.url,
     url: page.url(),
-    title: await page.title().catch(() => null),
-    error: error instanceof Error ? { message: error.message, stack: error.stack } : { message: String(error) },
+    title: maybeTitle,
+    responseStatus,
+    startedAt,
+    finishedAt: new Date().toISOString(),
+    durationMs: Date.now() - Date.parse(startedAt),
+    error: { message: normalizedError.message, stack: normalizedError.stack },
   };
 
-  await writeFile(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`, 'utf8');
+  try {
+    await writeFile(metadataPath, `${JSON.stringify(metadata, null, 2)}\n`, 'utf8');
+  } catch (artifactError) {
+    console.warn(`Could not write debug metadata for ${target.id}: ${normalizeError(artifactError).message}`);
+  }
 }
 
-async function captureTarget(browser, target) {
+async function captureTarget(browser, target, attempt) {
   const context = await browser.newContext({ viewport });
   const page = await context.newPage();
+  const startedAt = new Date().toISOString();
+  const stagedPath = path.join(generatedDir, `${target.id}.png`);
+  let maybeResponseStatus = null;
 
   page.setDefaultNavigationTimeout(navigationTimeoutMs);
   page.setDefaultTimeout(locatorTimeoutMs);
 
   try {
-    console.log(`Refreshing ${target.id} from ${target.url}`);
+    console.log(`Refreshing ${target.id} from ${target.url} (attempt ${attempt}/${maxCaptureAttempts})`);
 
-    await page.goto(target.url, {
+    const maybeResponse = await page.goto(target.url, {
       waitUntil: 'domcontentloaded',
       timeout: navigationTimeoutMs,
     });
+    maybeResponseStatus = maybeResponse?.status() ?? null;
+
+    if (!maybeResponse) {
+      throw new Error(`Navigation did not return an HTTP response for ${target.url}`);
+    }
+
+    if (!maybeResponse.ok()) {
+      throw new Error(`Navigation returned HTTP ${maybeResponse.status()} for ${target.url}`);
+    }
 
     await disableMotion(page);
     await waitForFonts(page);
@@ -189,38 +197,112 @@ async function captureTarget(browser, target) {
     }
 
     await page.waitForTimeout(settleDelayMs);
-    await mkdir(path.dirname(target.outputPath), { recursive: true });
+    await mkdir(generatedDir, { recursive: true });
     await page.screenshot({
-      path: target.outputPath,
+      path: stagedPath,
       animations: 'disabled',
     });
+
+    const validation = await validateScreenshot(stagedPath, viewport);
+    return {
+      id: target.id,
+      stagedPath,
+      outputPath: target.outputPath,
+      attempt,
+      responseStatus: maybeResponseStatus,
+      durationMs: Date.now() - Date.parse(startedAt),
+      validation,
+    };
   } catch (error) {
-    await captureDebugArtifacts(page, target, error);
+    try {
+      await captureDebugArtifacts({
+        page,
+        target,
+        attempt,
+        startedAt,
+        responseStatus: maybeResponseStatus,
+        error,
+      });
+    } catch (artifactError) {
+      console.warn(`Could not capture debug artifacts for ${target.id}: ${normalizeError(artifactError).message}`);
+    }
     throw error;
   } finally {
-    await context.close();
+    try {
+      await context.close();
+    } catch (closeError) {
+      console.warn(`Could not close browser context for ${target.id}: ${normalizeError(closeError).message}`);
+    }
   }
 }
 
-async function main() {
-  const selectedTargets = parseArgs(process.argv.slice(2));
+async function writeSummary(summary) {
+  await mkdir(artifactsDir, { recursive: true });
+  await writeFile(summaryPath, `${JSON.stringify(summary, null, 2)}\n`, 'utf8');
+}
 
-  await rm(debugDir, { recursive: true, force: true });
+async function main() {
+  const selectedTargets = parseArgs(process.argv.slice(2), targets);
+
+  await rm(artifactsDir, { recursive: true, force: true });
 
   const browser = await chromium.launch({ headless: true });
 
   try {
-    for (const target of selectedTargets) {
-      await captureTarget(browser, target);
-    }
-  } finally {
-    await browser.close();
-  }
+    const captures = await runCaptureBatch({
+      targets: selectedTargets,
+      expectedViewport: viewport,
+      maxAttempts: maxCaptureAttempts,
+      captureTarget: (target, attempt) => captureTarget(browser, target, attempt),
+    });
 
-  console.log(`Refreshed ${selectedTargets.length} screenshot target(s).`);
+    try {
+      await writeSummary({
+        status: 'success',
+        finishedAt: new Date().toISOString(),
+        captures,
+      });
+    } catch (summaryError) {
+      console.warn(`Could not write success summary: ${normalizeError(summaryError).message}`);
+    }
+
+    console.log(`Refreshed ${captures.length} screenshot target(s).`);
+  } catch (error) {
+    const normalizedError = normalizeError(error);
+    const failures =
+      error instanceof ScreenshotBatchError
+        ? error.failures.map(({ target, error: failureError, attempts }) => ({
+            id: target.id,
+            attempts,
+            error: normalizeError(failureError).message,
+          }))
+        : [];
+
+    try {
+      await writeSummary({
+        status: 'failure',
+        finishedAt: new Date().toISOString(),
+        error: normalizedError.message,
+        failures,
+      });
+    } catch (summaryError) {
+      console.warn(`Could not write failure summary: ${normalizeError(summaryError).message}`);
+    }
+
+    throw error;
+  } finally {
+    try {
+      await browser.close();
+    } catch (closeError) {
+      console.warn(`Could not close browser: ${normalizeError(closeError).message}`);
+    }
+  }
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.stack ?? error.message : error);
-  process.exitCode = 1;
-});
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  main().catch((error) => {
+    const normalizedError = normalizeError(error);
+    console.error(normalizedError.stack ?? normalizedError.message);
+    process.exitCode = 1;
+  });
+}
