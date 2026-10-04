@@ -12,6 +12,7 @@ import {
   parseArgs,
   runCaptureBatch,
   ScreenshotBatchError,
+  shouldRetryIgnoringCertificateErrors,
   validateScreenshot,
 } from './screenshot_refresh_core.mjs';
 
@@ -51,6 +52,9 @@ const targets = [
     id: 'win3bitcoin',
     url: 'https://win3bitco.in/',
     outputPath: path.join(repoRoot, 'assets', 'screenshots', 'win3bitcoin.png'),
+    // CloudFront certificate expired on 2026-09-26. Retry that date error
+    // once with certificate checks disabled; ready checks still require the UI.
+    allowExpiredCertificate: true,
     readyChecks: [
       (page) => page.getByRole('heading', { level: 1, name: 'Win3Bitco.in' }).first(),
       (page) => page.getByRole('heading', { level: 2, name: 'Mining Controls' }).first(),
@@ -159,7 +163,22 @@ async function captureDebugArtifacts({ page, target, attempt, startedAt, respons
 }
 
 async function captureTarget(browser, target, attempt) {
-  const context = await browser.newContext({ viewport });
+  try {
+    return await captureTargetOnce(browser, target, attempt, false);
+  } catch (error) {
+    if (!shouldRetryIgnoringCertificateErrors({ target, error, alreadyIgnoring: false })) {
+      throw error;
+    }
+  }
+
+  console.warn(
+    `Certificate date is invalid for ${target.id}; retrying with certificate errors ignored so content checks can run.`,
+  );
+  return captureTargetOnce(browser, target, attempt, true);
+}
+
+async function captureTargetOnce(browser, target, attempt, ignoreHTTPSErrors) {
+  const context = await browser.newContext({ viewport, ignoreHTTPSErrors });
   const page = await context.newPage();
   const startedAt = new Date().toISOString();
   const stagedPath = path.join(generatedDir, `${target.id}.png`);
@@ -214,18 +233,27 @@ async function captureTarget(browser, target, attempt) {
       validation,
     };
   } catch (error) {
-    try {
-      await captureDebugArtifacts({
-        page,
-        target,
-        attempt,
-        startedAt,
-        responseStatus: maybeResponseStatus,
-        error,
-      });
-    } catch (artifactError) {
-      console.warn(`Could not capture debug artifacts for ${target.id}: ${normalizeError(artifactError).message}`);
+    const retryIgnoringCertificates = shouldRetryIgnoringCertificateErrors({
+      target,
+      error,
+      alreadyIgnoring: ignoreHTTPSErrors,
+    });
+
+    if (!retryIgnoringCertificates) {
+      try {
+        await captureDebugArtifacts({
+          page,
+          target,
+          attempt,
+          startedAt,
+          responseStatus: maybeResponseStatus,
+          error,
+        });
+      } catch (artifactError) {
+        console.warn(`Could not capture debug artifacts for ${target.id}: ${normalizeError(artifactError).message}`);
+      }
     }
+
     throw error;
   } finally {
     try {

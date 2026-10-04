@@ -23,6 +23,21 @@ export function normalizeError(error) {
   return new Error(String(error));
 }
 
+const certificateDateErrorPattern = /ERR_CERT_DATE_INVALID/;
+
+/**
+ * Whether a capture should be repeated once with certificate errors ignored.
+ * Only an opted-in target, and only after Chromium reports an invalid
+ * certificate date, takes this path. Other failures stay strict.
+ */
+export function shouldRetryIgnoringCertificateErrors({ target, error, alreadyIgnoring }) {
+  if (alreadyIgnoring || !target.allowExpiredCertificate) {
+    return false;
+  }
+
+  return certificateDateErrorPattern.test(normalizeError(error).message);
+}
+
 export function parseArgs(argv, targets) {
   let maybeOnly = null;
 

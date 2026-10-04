@@ -9,6 +9,7 @@ import {
   promoteCaptures,
   runCaptureBatch,
   ScreenshotBatchError,
+  shouldRetryIgnoringCertificateErrors,
   validateScreenshot,
 } from './screenshot_refresh_core.mjs';
 
@@ -35,6 +36,88 @@ test('parseArgs rejects an unknown screenshot target', () => {
     () => parseArgs(['--only', 'unknown'], targets),
     /Unknown screenshot target "unknown". Available targets: known/,
   );
+});
+
+test('shouldRetryIgnoringCertificateErrors retries an opted-in certificate date failure', () => {
+  // Arrange
+  const target = { allowExpiredCertificate: true };
+  const error = new Error(
+    'page.goto: net::ERR_CERT_DATE_INVALID at https://win3bitco.in/\nCall log:\n  - navigating to "https://win3bitco.in/", waiting until "domcontentloaded"',
+  );
+
+  // Act
+  const shouldRetry = shouldRetryIgnoringCertificateErrors({
+    target,
+    error,
+    alreadyIgnoring: false,
+  });
+
+  // Assert
+  assert.equal(shouldRetry, true);
+});
+
+test('shouldRetryIgnoringCertificateErrors rejects a different certificate error', () => {
+  // Arrange
+  const target = { allowExpiredCertificate: true };
+  const error = new Error('page.goto: net::ERR_CERT_AUTHORITY_INVALID at https://win3bitco.in/');
+
+  // Act
+  const shouldRetry = shouldRetryIgnoringCertificateErrors({
+    target,
+    error,
+    alreadyIgnoring: false,
+  });
+
+  // Assert
+  assert.equal(shouldRetry, false);
+});
+
+test('shouldRetryIgnoringCertificateErrors retries a certificate date failure only once', () => {
+  // Arrange
+  const target = { allowExpiredCertificate: true };
+  const error = new Error('page.goto: net::ERR_CERT_DATE_INVALID at https://win3bitco.in/');
+
+  // Act
+  const shouldRetry = shouldRetryIgnoringCertificateErrors({
+    target,
+    error,
+    alreadyIgnoring: true,
+  });
+
+  // Assert
+  assert.equal(shouldRetry, false);
+});
+
+test('shouldRetryIgnoringCertificateErrors keeps targets strict unless they opt in', () => {
+  // Arrange
+  const target = { allowExpiredCertificate: false };
+  const error = new Error('page.goto: net::ERR_CERT_DATE_INVALID at https://win3bitco.in/');
+
+  // Act
+  const shouldRetry = shouldRetryIgnoringCertificateErrors({
+    target,
+    error,
+    alreadyIgnoring: false,
+  });
+
+  // Assert
+  assert.equal(shouldRetry, false);
+});
+
+test('shouldRetryIgnoringCertificateErrors rejects an HTTP failure', () => {
+  // Arrange
+  const target = { allowExpiredCertificate: true };
+  const error = new Error('Navigation returned HTTP 503 for https://win3bitco.in/');
+
+  // Act
+  const shouldRetry = shouldRetryIgnoringCertificateErrors({
+    target,
+    error,
+    alreadyIgnoring: false,
+  });
+
+  // Assert
+  assert.equal(shouldRetry, false);
 });
 
 test('parseArgs rejects a missing --only value', () => {
