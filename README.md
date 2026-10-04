@@ -1,6 +1,7 @@
 # Hi, I'm Peter 👋
 
 <!-- Bright Builds logo is intentionally vendored from https://github.com/bright-builds-llc/logo at assets/logo/primary/bright-builds-logo.png for README stability. To refresh it, replace assets/logos/bright-builds-logo.png from that canonical upstream asset while keeping this local path stable. -->
+
 📍 Chicago | Software Engineer at <a href="https://venmo.com/"><img src="https://img.shields.io/badge/-%20-008CFF?style=flat&logo=venmo&logoColor=white&logoSize=auto" alt="Venmo" align="absmiddle"></a> | Founder, <a href="https://github.com/bright-builds-llc">Bright Builds LLC <img src="assets/logos/bright-builds-logo.png" alt="" height="18" align="absmiddle"></a>
 
 Chicago-based agentic engineer building free, open source, decentralized tools across AI, Bitcoin, and the web.
@@ -81,16 +82,16 @@ A research-driven registry tracking where AI, open source, Bitcoin-native coordi
   />
 </a>
 
-### [Win3Bitco.in](https://win3bitco.in/)
+### [Win3Bitcoin.com](https://win3bitcoin.com/)
 
 [Repo](https://github.com/pRizz/open-bitcoin-web-miner)
 
 An open Bitcoin mining experiment that lets anyone play around with real mining, inspect the proof, and learn how Bitcoin mining works using their own computer's CPU or GPU. It offers a hands-on way to understand where consumer and home mining fit in a more open future, including the astronomically low but real chance of actually winning a block.
 
-<a href="https://win3bitco.in/">
+<a href="https://win3bitcoin.com/">
   <img
     src="assets/screenshots/win3bitcoin.png"
-    alt="Screenshot of Win3Bitco.in showing the full mining dashboard"
+    alt="Screenshot of Win3Bitcoin.com showing the full mining dashboard"
     width="720"
   />
 </a>
@@ -121,7 +122,7 @@ I am interested in tools, protocols, and services that move power outward: towar
 
 ## How I build
 
-I base my recent projects, and the ones I build going forward, on the standards and patterns captured in [coding-and-architecture-requirements](https://github.com/bright-builds-llc/coding-and-architecture-requirements). It serves as the living reference for how I think about code quality, architecture, maintainability, and the overall shape of serious software projects, and it continues to evolve as I refine and discover my requirements.
+I base my recent projects, and the ones I build going forward, on the standards and patterns captured in [Bright Builds Rules](https://github.com/bright-builds-llc/bright-builds-rules). It serves as the living reference for how I think about code quality, architecture, maintainability, and the overall shape of serious software projects, and it continues to evolve as I refine and discover my requirements.
 
 This is the current map I use for thinking about AI tooling: which tools fit simple versus complex apps, and which ones produce quick vibes versus more durable engineered output.
 
@@ -219,9 +220,9 @@ Some lines I keep coming back to:
 >
 > - Commonly attributed to Emanuel Lasker (1868-1941), former World Chess Champion
 
-> "We are made of star-stuff."  
-> "Somewhere, something incredible is waiting to be known."  
-> "Extraordinary claims require extraordinary evidence."  
+> "We are made of star-stuff."\
+> "Somewhere, something incredible is waiting to be known."\
+> "Extraordinary claims require extraordinary evidence."\
 > — Carl Sagan (1934–1996)
 
 ## Selected writing

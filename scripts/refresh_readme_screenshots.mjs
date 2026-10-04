@@ -49,10 +49,10 @@ const targets = [
   },
   {
     id: 'win3bitcoin',
-    url: 'https://win3bitco.in/',
+    url: 'https://win3bitcoin.com/',
     outputPath: path.join(repoRoot, 'assets', 'screenshots', 'win3bitcoin.png'),
     readyChecks: [
-      (page) => page.getByRole('heading', { level: 1, name: 'Win3Bitco.in' }).first(),
+      (page) => page.getByRole('heading', { level: 1, name: 'Win3Bitcoin.com' }).first(),
       (page) => page.getByRole('heading', { level: 2, name: 'Mining Controls' }).first(),
       (page) => page.getByText('Configure your mining settings', { exact: true }).first(),
     ],

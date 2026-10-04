@@ -166,6 +166,35 @@ test('runCaptureBatch leaves existing outputs unchanged when one target fails', 
   await access(diagnosticPath);
 });
 
+test('runCaptureBatch preserves published images when a certificate is invalid', async (t) => {
+  // Arrange
+  const temporaryDir = await createTemporaryDir(t);
+  const outputPath = path.join(temporaryDir, 'published.png');
+  await writeFile(outputPath, 'last known good screenshot');
+  let promotionCalled = false;
+
+  // Act
+  const error = await captureRejection(runCaptureBatch({
+    targets: [{ id: 'win3bitcoin' }],
+    expectedViewport: viewport,
+    logger: quietLogger,
+    captureTarget: async () => {
+      throw new Error('page.goto: net::ERR_CERT_DATE_INVALID');
+    },
+    sleep: async () => {},
+    promote: async () => {
+      promotionCalled = true;
+      await writeFile(outputPath, 'unverified screenshot');
+    },
+  }));
+
+  // Assert
+  assert.ok(error instanceof ScreenshotBatchError);
+  assert.match(error.message, /ERR_CERT_DATE_INVALID/);
+  assert.equal(promotionCalled, false);
+  assert.equal(await readFile(outputPath, 'utf8'), 'last known good screenshot');
+});
+
 test('promoteCaptures validates every staged image before replacing outputs', async (t) => {
   // Arrange
   const temporaryDir = await createTemporaryDir(t);
