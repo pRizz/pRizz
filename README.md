@@ -96,7 +96,23 @@ An open Bitcoin mining experiment that lets anyone play around with real mining,
   />
 </a>
 
-These projects look different on the surface, but they all point in the same direction: more user ownership, more open coordination, and more room for disruptive ideas that do not require permission from gatekeepers.
+### [Project Midas ADS](https://github.com/pRizz/Project-Midas-ADS)
+
+[Repo](https://github.com/pRizz/Project-Midas-ADS) · [Browser preview](https://prizz.github.io/Project-Midas-ADS/) · [Windows releases](https://github.com/pRizz/Project-Midas-ADS/releases/latest)
+
+My independently maintained fork of Project Midas, bringing modern aiming, movement, and HUD options to the GoldenEye 007 PC port. Features include aim down sights, sprinting, sniper scope zoom, and improved combat feedback, with Windows builds and a browser preview. Requires your own GoldenEye 007 USA ROM.
+
+<!-- Gameplay thumbnail is manually vendored from https://github.com/pRizz/Project-Midas-ADS/blob/main/.github/images/ads-gameplay-thumbnail.png; refresh it when the linked demo changes. -->
+
+<a href="https://youtu.be/dI-G7Lo12hA">
+  <img
+    src="assets/screenshots/project-midas-ads.png"
+    alt="Watch Project Midas ADS gameplay featuring new hands, improved sights, and sniper scope zoom"
+    width="720"
+  />
+</a>
+
+These projects span publishing, research, Bitcoin, and games, connected by an interest in open software, user ownership, and building on the work of others.
 
 ## Roadmap
 
