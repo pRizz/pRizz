@@ -112,6 +112,22 @@ My independently maintained fork of Project Midas, bringing modern aiming, movem
   />
 </a>
 
+### [Halftone QR Studio](https://prizz.github.io/halftone-qr-studio/)
+
+[Repo](https://github.com/pRizz/halftone-qr-studio)
+
+A browser-based tool for creating picture-filled QR codes in smooth color, grayscale, and halftone modes, with image templates and PNG/SVG export. Images are processed locally in the browser. Built with TypeScript and Vite.
+
+<!-- Screenshot is manually vendored from https://github.com/pRizz/halftone-qr-studio/blob/main/docs/images/halftone-qr-studio-cat.png; refresh it when the app's preview changes. Cat photo by Pavel Kovalev (CC0). -->
+
+<a href="https://prizz.github.io/halftone-qr-studio/">
+  <img
+    src="assets/screenshots/halftone-qr-studio.png"
+    alt="Screenshot of Halftone QR Studio showing the Cat template as a smooth color QR code"
+    width="720"
+  />
+</a>
+
 These projects span publishing, research, Bitcoin, and games, connected by an interest in open software, user ownership, and building on the work of others.
 
 ## Roadmap
